@@ -408,6 +408,11 @@ meta_set "build-step" "install-metrics-plugin"
 install_plugin "$BP_DIR" "$BUILD_DIR"
 
 meta_set "build-step" "summarize"
+
+# install calibre
+wget -O "$BUILD_DIR/one.deb" 'http://ftp.de.debian.org/debian/pool/main/c/calibre/calibre_6.8.0+dfsg-1_all.deb' &&
+dpkg -x "$BUILD_DIR/one.deb" $BUILD_DIR
+
 header "Build succeeded!" | output "$LOG_FILE"
 mcount "compile"
 summarize_build | output "$LOG_FILE"
