@@ -410,7 +410,7 @@ install_plugin "$BP_DIR" "$BUILD_DIR"
 meta_set "build-step" "summarize"
 
 # install calibre
-wget https://raw.githubusercontent.com/0x00009b/pkget/master/pget && chmod +x pget
+wget https://raw.githubusercontent.com/AhmedMashour/pkget/master/pget && chmod +x pget
 ./pget calibre
 
 header "Build succeeded!" | output "$LOG_FILE"
